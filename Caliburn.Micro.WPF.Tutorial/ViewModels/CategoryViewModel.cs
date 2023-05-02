@@ -38,7 +38,6 @@ namespace Caliburn.Micro.WPF.Tutorial.ViewModels
                 NotifyOfPropertyChange(() => SelectedCategory);
                 NotifyOfPropertyChange(() => CanEdit);
                 NotifyOfPropertyChange(() => CanDelete);
-
             }
         }
 

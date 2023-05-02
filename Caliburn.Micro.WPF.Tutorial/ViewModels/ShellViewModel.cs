@@ -29,5 +29,17 @@ namespace Caliburn.Micro.WPF.Tutorial.ViewModels
                 return false;
             }
         }
+
+        private readonly IWindowManager _windowManager;
+
+        public ShellViewModel(IWindowManager windowManager)
+        {
+            _windowManager = windowManager;
+        }
+
+        public Task About()
+        {
+            return _windowManager.ShowDialogAsync(IoC.Get<AboutViewModel>());
+        }
     }
 }

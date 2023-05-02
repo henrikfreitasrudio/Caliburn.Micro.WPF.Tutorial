@@ -8,5 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased] - 2023-05-01
 
 ### Added
-- Changelog file
+- About window
 
+## [Unreleased] - 2023-05-01
+
+### Added
+- Changelog file

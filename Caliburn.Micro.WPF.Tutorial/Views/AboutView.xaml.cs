@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Diagnostics;
 
 namespace Caliburn.Micro.WPF.Tutorial.Views
 {
@@ -22,6 +23,17 @@ namespace Caliburn.Micro.WPF.Tutorial.Views
         public AboutView()
         {
             InitializeComponent();
+        }
+
+        private void Hyperlink_RequestNavigate(object sender, System.Windows.Navigation.RequestNavigateEventArgs e)
+        {
+            // You need a workaroung here for .Net Core:
+            var psi = new ProcessStartInfo
+            {
+                FileName = e.Uri.AbsoluteUri,
+                UseShellExecute = true
+            };
+            Process.Start(psi);
         }
     }
 }

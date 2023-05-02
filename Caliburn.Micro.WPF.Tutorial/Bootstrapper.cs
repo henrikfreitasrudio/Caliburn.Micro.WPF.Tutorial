@@ -44,7 +44,7 @@ namespace Caliburn.Micro.WPF.Tutorial
 
         protected override object GetInstance(Type service, string key)
         {
-            return base.GetInstance(service, key);
+            return _container.GetInstance(service, key);
         }
 
         protected override IEnumerable<object> GetAllInstances(Type service)
