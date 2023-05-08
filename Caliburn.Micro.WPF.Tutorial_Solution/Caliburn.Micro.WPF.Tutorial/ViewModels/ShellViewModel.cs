@@ -41,5 +41,10 @@ namespace Caliburn.Micro.WPF.Tutorial.ViewModels
         {
             return _windowManager.ShowDialogAsync(IoC.Get<AboutViewModel>());
         }
+
+        public Task Manual()
+        {
+            return _windowManager.ShowDialogAsync(IoC.Get<AboutViewModel>());
+        }
     }
 }
